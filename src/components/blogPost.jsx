@@ -1,4 +1,4 @@
-import { Box, Heading, Text, useColorModeValue } from "@chakra-ui/react";
+import { Box, Heading, Text, useColorModeValue, Image} from "@chakra-ui/react";
 import { useRouter } from "next/router";
 import NextLink from "next/link";
 import dayjs from "dayjs";
@@ -18,12 +18,12 @@ const BlogPost = ({ posts }) => {
   return (
     <>
       {posts.map((post) => {
-        const { slug, title, summary, tags, publishedAt } = post;
+        const { slug, title, summary, tags, publishedAt, image } = post;
 
         const thisYear = publishedAt.substring(0, 4);
 
         const YearComponent = thisYear !== year && (
-          <Heading color={yearColor} mt="2">
+          <Heading color={yearColor} mt="2" pb="3">
             {thisYear}
           </Heading>
         );
@@ -36,10 +36,11 @@ const BlogPost = ({ posts }) => {
 
             <Heading as="h3" fontSize="2xl" fontWeight="700">
               <NextLink href={`/blog/${slug}`}>
+
                 <a>{title}</a>
               </NextLink>
             </Heading>
-
+            <Image src={image} padding={10}/>
             <Text fontSize="17px" fontWeight="400" color={summaryColor} py="1">
               {summary}
             </Text>
@@ -50,12 +51,6 @@ const BlogPost = ({ posts }) => {
               return (
                 <TagComponent
                   color={color}
-                  onClick={() =>
-                    router.push({
-                      pathname: "/blog/",
-                      query: { tag },
-                    })
-                  }
                   key={tag}
                 >
                   {tag}

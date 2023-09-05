@@ -35,6 +35,7 @@ const BlogPost = ({ mdxSource, frontMatter }) => {
 
   return (
     <>
+      
       <NextSeo
         title={title}
         description={description}

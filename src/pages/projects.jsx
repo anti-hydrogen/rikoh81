@@ -17,7 +17,7 @@ const options = {
   keys: ["title"],
 };
 
-const Blog = ({ posts }) => {
+const Projects = ({ posts }) => {
   const router = useRouter();
 
   const fuse = new Fuse(posts, options);
@@ -51,9 +51,9 @@ const Blog = ({ posts }) => {
     }
   }, [router]);
 
-  const title = "Blog";
+  const title = "Projects";
   const description = seo.description;
-  const url = `${seo.canonical}blog`;
+  const url = `${seo.canonical}project`;
 
   return (
     <>
@@ -93,7 +93,7 @@ const Blog = ({ posts }) => {
           wrap="wrap"
           m="1.5rem 0"
         >
-          {Object.keys(tagColor).map((tag, index) => {
+          {Object.keys(tagColor).slice(0,6).map((tag, index) => {
             const color = tagColor[tag];
 
             return (
@@ -103,7 +103,7 @@ const Blog = ({ posts }) => {
                 </TagComponent>
               </Box>
             );
-          })}
+          })}  
         </Flex>
 
         {blogPost.length > 0 ? (
@@ -119,7 +119,7 @@ const Blog = ({ posts }) => {
             fontWeight="500"
           >
             <AlertIcon />
-            No blog post has been found!
+            No projects has been found!
           </Alert>
         )}
       </Box>
@@ -136,4 +136,4 @@ export async function getStaticProps() {
   return { props: { posts } };
 }
 
-export default Blog;
+export default Projects;

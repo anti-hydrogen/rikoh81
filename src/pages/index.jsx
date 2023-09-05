@@ -7,6 +7,7 @@ import {
 } from "@chakra-ui/react";
 import { NextSeo } from "next-seo";
 import NextImage from "next/image";
+import Skills from "@/components/Skills"
 
 import { seo, data } from "config";
 
@@ -46,39 +47,46 @@ const Home = () => {
         textAlign="center"
         py="4"
       >
-        <NextImage
-          src="/bighead.svg"
-          width="350"
-          height="350"
-          alt="avatar bigheads"
-          placeholder="blur"
-          blurDataURL="L5I~of#i004mgjw]-4XA00?wL#xu"
-          priority
-        />
+        <div style={{ borderRadius: '50%', overflow: 'hidden' }}>
+          <NextImage
+            src="/las.avif"
+            width="500"
+            height="350"
+            alt="avatar bigheads"
+            placeholder="blur"
+            blurDataURL="L5I~of#i004mgjw]-4XA00?wL#xu"
+            priority
+          />
+        </div>
+
+        
         <Box>
           <Heading as="h1" fontSize="2xl" fontWeight="500" py="2">
-            Hi, I'm John Doe{" "}
+            Hi, I'm Jeremya Dharmawan{" "}
             <span role="img" aria-label="hand">
               👋🏻
             </span>
           </Heading>
           <Heading fontSize={["3xl", "4xl"]} fontWeight="700">
             <Text as="span" color={color}>
-              Building
+              Computer Science
             </Text>{" "}
-            digital products, Brands, And experience.
+            Student
           </Heading>
           <Text py="4">
-            A{" "}
-            <Text as="span" fontWeight="600">
-              web designer
+            I am{" "}
+            <Text as="span" fontWeight="800">
+              a third-year computer science student  Bandung Institute of Technology
             </Text>{" "}
-            and{" "}
-            <Text as="span" fontWeight="600">
-              front-end web developer
+            at{" "}
+            <Text as="span" fontWeight="800">
+             Bandung Institute of Technology
             </Text>{" "}
-            based in the US, I specialize in UI/UX design, Responsive web
-            design, And accessibility.
+            and I'm excited about diving into{" "}
+            <Text as="span" fontWeight="600">
+             software engineering, computer vision, and robotics.
+            </Text>{" "}
+            
           </Text>
           <Button
             colorScheme="telegram"
@@ -90,46 +98,7 @@ const Home = () => {
           </Button>
         </Box>
       </Box>
-
-      <Box
-        as="section"
-        d="flex"
-        alignItems="center"
-        flexDir="column"
-        textAlign={{ base: "center", lg: "left" }}
-        py="4"
-      >
-        {data.map((item, index) => (
-          <Box
-            d={{ lg: "flex" }}
-            justifyContent={{ lg: "center" }}
-            alignItems={{ lg: "center" }}
-            flexDir={{ lg: isOdd(index) == 1 && "row-reverse" }}
-            key={index}
-          >
-            <Box
-              w={{ base: "80%", lg: "35%" }}
-              mx={{ base: "auto", lg: "0" }}
-              pl={{ lg: isOdd(index) == 1 && "10" }}
-              pr={{ lg: isOdd(index) == 0 && "10" }}
-            >
-              <NextImage
-                src={item.image}
-                width="500"
-                height="500"
-                alt={item.title}
-                placeholder="blur"
-                blurDataURL="L8LE.{~60000_3V@ITx^00t:V?-P"
-              />
-            </Box>
-
-            <Box w={{ lg: "50%" }}>
-              <Heading as="h1">{item.title}</Heading>
-              <Text py="4">{item.description}</Text>
-            </Box>
-          </Box>
-        ))}
-      </Box>
+      <Skills/>
     </>
   );
 };

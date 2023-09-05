@@ -5,7 +5,7 @@ import { MAX_WIDTH } from "config";
 
 // Fell free to add your social media accounts!
 const socialAccounts = [
-  { icon: FaGithub, path: "https://github.com/", title: "Github" },
+  { icon: FaGithub, path: "https://github.com/jejejery", title: "Github" },
   { icon: FaLinkedin, path: "https://www.linkedin.com/", title: "Linkedin" },
   { icon: FaInstagram, path: "https://www.instagram.com/", title: "Instagram" },
 ];
@@ -77,7 +77,7 @@ const Footer = () => {
         </Box>
         <Box py="2">
           <ChakraLink
-            href="https://github.com/imadatyatalah/nextjs-chakra-ui-portfolio-template"
+            // href="https://github.com/imadatyatalah/nextjs-chakra-ui-portfolio-template"
             aria-label="source code"
             isExternal
           >
