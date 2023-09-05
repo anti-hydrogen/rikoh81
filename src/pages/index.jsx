@@ -76,7 +76,7 @@ const Home = () => {
           <Text py="4">
             I am{" "}
             <Text as="span" fontWeight="800">
-              a third-year computer science student  Bandung Institute of Technology
+              a third-year computer science student
             </Text>{" "}
             at{" "}
             <Text as="span" fontWeight="800">
