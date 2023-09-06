@@ -17,7 +17,7 @@ const milestones = [
   {
     id: 1,
     date: 'March 2023',
-    title: 'Firmware Engineer - SAFMC',
+    title: 'Firmware Engineer - SAFMC(Singapore Amazing Flying Machine Competition)',
     description:
       'I develop firmware using the Arduino programming language to create a remote control system for a mechanical hand on a UAV.',
     link : ""
@@ -25,7 +25,7 @@ const milestones = [
   {
     id: 2,
     date: 'November 2022',
-    title: 'Gemastik IoT Finalist',
+    title: 'Gemastik IoT - Finalist',
     description: `I develop software for Arduino and Raspberry Pi using computer vision and other sensors to recognize drowsiness`,
     link : 'https://drive.google.com/file/d/1OWazXv-TMEfL3hpLucxNcCJ5HRzvfydr/view?usp=sharing'
   },
